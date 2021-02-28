@@ -15,7 +15,6 @@ Before installing, make sure you have **sense-hat** installed:
 ```
 sudo apt-get update
 sudo apt-get install sense-hat
-sudo reboot
 ```
 
 After installing **sense-hat** install RaspiMonitor from **dist** folder:

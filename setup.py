@@ -1,18 +1,8 @@
-from setuptools.command.install import install
 from setuptools import setup, find_packages
 import os
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
-
-
-# https://stackoverflow.com/questions/35448758/using-setup-py-to-install-python-project-as-a-systemd-service
-class CustomInstallCommand(install):
-    def run(self):
-        install.run(self)
-
-        current_dir_path = os.path.dirname(os.path.realpath(__file__))
-        print(current_dir_path)
 
 setup(
     name="RaspiMonitor",
@@ -34,5 +24,4 @@ setup(
     entry_points={
         'console_scripts': ['raspimonitor=raspimonitor.main:main'],
     },
-    cmdclass={'install': CustomInstallCommand}
 )
