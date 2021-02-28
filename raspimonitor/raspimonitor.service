@@ -1,0 +1,13 @@
+[Unit]
+Description=Raspberry pi SenseHat Monitor
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/raspimonitor
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
